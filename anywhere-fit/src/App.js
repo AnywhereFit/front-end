@@ -9,6 +9,7 @@ function App() {
           <h1>Anywhere Fitness</h1>
           <Link to="login">Login</Link>
           <Link to="signup">Sign Up</Link>
+          <Link to="client">Client</Link>
         </header>
       </div>
   );
