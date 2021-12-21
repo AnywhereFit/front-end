@@ -12,15 +12,34 @@ import SignUp from "./components/SignUp";
 import CreateClass from "./components/createClass/CreateClass";
 import InsLanding from "./components/InsLanding";
 
+import PrivateRoute from "./components/PrivateRoute";
+
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="login" element={<Login />} />
-      <Route path="signup" element={<SignUp />} />
-      <Route path="createclass" element={<CreateClass />} />
-      <Route path="inslanding" element={<InsLanding />} />
+      <Route exact path="/" element={<App />} />
+      <Route exact path="login" element={<Login />} />
+      <Route exact path="signup" element={<SignUp />} />
+
+      <Route 
+        path="createclass" 
+        element={
+          <PrivateRoute>
+            <CreateClass />
+          </PrivateRoute>
+        }
+      />
+      
+      <Route 
+        path="inslanding" 
+        element={
+          <PrivateRoute>
+            <InsLanding />
+          </PrivateRoute>
+        } 
+      />
+
     </Routes>
   </BrowserRouter>,
   rootElement
