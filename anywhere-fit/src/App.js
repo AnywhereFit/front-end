@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-import InsLanding from "./components/InsLanding";
+
 function App() {
   return (
     <div className="App">
@@ -10,7 +10,6 @@ function App() {
         <Link to="login">Login</Link>
         <Link to="signup">Sign Up</Link>
       </header>
-      <InsLanding />
     </div>
 
   );
