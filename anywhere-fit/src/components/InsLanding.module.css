@@ -2,18 +2,24 @@
   margin: 0;
   padding: 0;
   border-style: border-box;
+  /* color: #6b6570; */
+}
+body {
+  background-color: #e9ecef;
 }
 .container {
   background-color: #e9ecef;
   font-family: "Poppins", sans-serif;
   color: #6b6570;
   padding-top: 1em;
-  height: 90vh;
+  /* height: 100vh; */
   /* border: 1px solid red; */
 }
 .header {
   font-size: 2rem;
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #6b6570;
 }
 
 .wrapper {
@@ -30,6 +36,18 @@
   /* padding-left: 1em; */
   margin: 0 auto;
   width: 80%;
+}
+@media only screen and (min-width: 811px) {
+  .container {
+    display: flex;
+  }
+  .wrapper {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    /* padding: 2em; */
+    width: 40%;
+    flex-wrap: wrap;
+  }
 }
 .content {
   margin: 0;
