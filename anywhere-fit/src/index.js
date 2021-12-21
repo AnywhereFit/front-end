@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import "./index.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,6 +19,7 @@ render(
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<SignUp />} />
       <Route path="create-class" element={<CreateClass />} />
+
     </Routes>
   </BrowserRouter>,
   rootElement
