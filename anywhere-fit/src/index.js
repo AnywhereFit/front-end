@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './index.css';
+import "./index.css";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import App from './App';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import CreateClass from './components/createClass/CreateClass';
+import App from "./App";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import CreateClass from "./components/createClass/CreateClass";
 
 const rootElement = document.getElementById("root");
 render(
