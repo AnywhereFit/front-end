@@ -6,11 +6,11 @@ import "./CreateClass.css";
 const CreateClass = () => {
   return (
     <div className="create-class-container">
-      <h1>Create a New Class</h1>
+      <h1>Create a new class</h1>
       <Form>
         <FormGroup>
           <Label>Name:</Label>
-          <Input type="text" />
+          <Input type="text" placeholder='Give a name to your class' />
         </FormGroup>
         <FormGroup>
           <Label>Type:</Label>
@@ -34,18 +34,18 @@ const CreateClass = () => {
           <Label>Intensity Level:</Label>
           <FormGroup>
             <Input type="radio" name='intensity' />
-            <Label>Easy</Label>
+            <Label className="radio-btn-label">Easy</Label>
             <br />
             <Input type="radio" name='intensity' />
-            <Label>Moderate</Label>
+            <Label className="radio-btn-label">Moderate</Label>
             <br />
             <Input type="radio" name='intensity' />
-            <Label>Hard</Label>
+            <Label className="radio-btn-label">Hard</Label>
           </FormGroup>
         </FormGroup>
         <FormGroup>
           <Label>Location:</Label>
-          <Input type="text" />
+          <Input type="text" placeholder='Where will this class be located?' />
         </FormGroup>
         <FormGroup>
           <Label>Class Size:</Label>
