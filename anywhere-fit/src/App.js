@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./App.css";
+
+import Login from "./components/Login";
+
 function App() {
   return (
     <div className="App">
       <header>
         <h1>Anywhere Fitness</h1>
-        <Link to="login">Login</Link>
-        <Link to="signup">Sign Up</Link>
+        <Login />
       </header>
     </div>
   );

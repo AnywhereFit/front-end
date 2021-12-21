@@ -32,8 +32,8 @@ const SignUp = () => {
     }
 
     return (
-    <div>
-        <h1>Login</h1>
+    <div className="App">
+        <h1>Sign Up</h1>
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="username">Username:</label>
@@ -47,7 +47,7 @@ const SignUp = () => {
             <label htmlFor="authcode">Auth Code:</label>
             <input onChange={handleChange} name="authcode" id="authcode" />
           </div>
-          <button>Submit</button>
+          <button>Sign Up</button>
         </form>
     </div>)
 }
