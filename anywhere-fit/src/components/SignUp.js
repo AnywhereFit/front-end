@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const SignUp = () => {
-    const { push } = useNavigate();
+    const push = useNavigate();
 
     const [cred, setCred] = useState({
         username: "",
         password: "",
-        authCode: ""
+        role_name: ""
     });
 
     const handleChange = (e) => {
@@ -21,9 +21,8 @@ const SignUp = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('', cred)
+        axios.post('https://fitanywhere.herokuapp.com/api/auth/register', cred)
             .then(resp => {
-                localStorage.setItem("token", );
                 push('/client');
             })
             .catch(err => {
@@ -44,8 +43,8 @@ const SignUp = () => {
             <input onChange={handleChange} name="password" type="password" id="password" />
           </div>
           <div>
-            <label htmlFor="authcode">Auth Code:</label>
-            <input onChange={handleChange} name="authcode" id="authcode" />
+            <label htmlFor="role_name">Role:</label>
+            <input onChange={handleChange} name="role_name" id="role_name" />
           </div>
           <button>Sign Up</button>
         </form>

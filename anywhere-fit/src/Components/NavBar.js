@@ -17,6 +17,7 @@ const NavBar = () => {
             <Link to="client">Find a Class</Link>
             <Link to="createclass">Create Class</Link>
             <Link to="inslanding">Instructor</Link>
+            <Link to="logout">Logout</Link>
         </div>
     )
 }

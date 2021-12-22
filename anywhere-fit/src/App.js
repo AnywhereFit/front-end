@@ -8,6 +8,7 @@ import SignUp from "./components/SignUp";
 import CreateClass from "./components/createClass/CreateClass";
 import InsLanding from "./components/InsLanding";
 import Client from "./components/Client";
+import Logout from "./components/Logout";
 
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -43,6 +44,15 @@ function App() {
         element={
           <PrivateRoute>
             <Client />
+          </PrivateRoute>
+        } 
+      />
+
+      <Route 
+        path="logout" 
+        element={
+          <PrivateRoute>
+            <Logout />
           </PrivateRoute>
         } 
       />
