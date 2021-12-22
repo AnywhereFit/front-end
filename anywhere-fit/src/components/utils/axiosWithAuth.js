@@ -7,7 +7,7 @@ const axiosWithAuth = () => {
         headers: {
             authorization: token
         },
-        baseURL: "https://fitanywhere.herokuapp.com/api/auth"
+        baseURL: "https://fitanywhere.herokuapp.com/api"
     })
 }
 

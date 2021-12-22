@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'reactstrap';
 import axiosWithAuth from './utils/axiosWithAuth';
 
-function Client() { 
+const Client = () => {
+
+  const [classes, setClasses] = useState([]);
   
   useEffect(() => {
-    axiosWithAuth().get('/client')
+    axiosWithAuth().get('/classes')
       .then(resp => {
-        console.log(resp);
+        setClasses(resp.date);
       })
       .catch(err => {
         console.error(err);
@@ -15,7 +17,7 @@ function Client() {
   }, []);
     
     return (
-    <>
+    <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Client Page</a>
@@ -47,11 +49,18 @@ function Client() {
 </div>
 
 
-
+      {/* <ul>
+        {
+          classes.map(class => {
+            return <li>{class.class_name}</li>
+          })
+        }
+      </ul> */}
 
 <div>
 <ul class="list-group">
     <h4>Here are the classes we offer:</h4>
+
   <li class="list-group-item">Yoga</li>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   <li class="list-group-item">CrossFit</li>
@@ -75,9 +84,9 @@ function Client() {
         </div>
       </div>
     </div>
-</>
+</div>
 
-    );
+      )
 };
 
 export default Client;
