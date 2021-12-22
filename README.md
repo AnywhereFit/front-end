@@ -25,6 +25,7 @@ Thanks goes these amazing people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
+<table>
 
 <tr><td align="center"><a href="https://github.com/andrewhunt21"><img src="https://avatars.githubusercontent.com/u/85648473?v=4" width="90px;" alt="Andrew Hunt"/><br /><sub><b>Andrew Hunt</b></sub></a>
 
