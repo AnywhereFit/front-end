@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'reactstrap';
+import axiosWithAuth from './utils/axiosWithAuth';
 
-function client() { 
+function Client() { 
+  
+  useEffect(() => {
+    axiosWithAuth().get('/client')
+      .then(resp => {
+        console.log(resp);
+      })
+      .catch(err => {
+        console.error(err);
+      })
+  }, []);
     
     return (
     <>
@@ -69,7 +80,7 @@ function client() {
     );
 };
 
-export default client;
+export default Client;
 
 
 
