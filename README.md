@@ -21,7 +21,7 @@ and bring on more clients is possible on Anywhere Fitness all-in-one web app.
 
 ## Contributors
 
-Thanks goes these amazing people:
+Thanks goes to these amazing people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
