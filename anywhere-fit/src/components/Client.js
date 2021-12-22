@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'reactstrap';
 import axiosWithAuth from './utils/axiosWithAuth';
 
-function Client() { 
+const Client = () => {
+
+  const [classes, setClasses] = useState([]);
   
   useEffect(() => {
-    axiosWithAuth().get('/client')
+    axiosWithAuth().get('/classes')
       .then(resp => {
-        console.log(resp);
+        setClasses(resp.data);
+        console.log(resp.data);
       })
       .catch(err => {
         console.error(err);
@@ -47,23 +50,18 @@ function Client() {
 </div>
 
 
+      <ul className="list-group">
+        {
+          classes.map(item => {
+            return <div>
+              <h3 className="list-group-item">{item.class_name}</h3>
+              <h5>Class Type: {item.class_type}</h5>
+              <li>Date: {item.class_date} | Start: {item.start_time} | Duration: {item.class_duration} | Location: {item.class_location} | Max Attendees: {item.max_attendees}</li>
 
-
-<div>
-<ul className="list-group">
-    <h4>Here are the classes we offer:</h4>
-  <li className="list-group-item">Yoga</li>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <li className="list-group-item">CrossFit</li>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <li className="list-group-item">Olympic Weightlifting</li>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <li className="list-group-item">Jiu Jitsu</li>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <li className="list-group-item">Judo</li>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</ul>
-</div>
+              </div>
+          })
+        }
+      </ul>
 
 
 
@@ -77,7 +75,7 @@ function Client() {
     </div>
 </>
 
-    );
+      )
 };
 
 export default Client;
