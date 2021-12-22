@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
-    const { push } = useNavigate();
+    const push = useNavigate();
 
     const [cred, setCred] = useState({
         username: "",
@@ -20,13 +20,14 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('', cred)
+        axios.post('https://fitanywhere.herokuapp.com/api/auth/login', cred)
             .then(resp => {
-                localStorage.setItem("token", );
-                push('/');
+                console.log(resp);
+                localStorage.setItem("token", resp.data.token);
+                push('/client');
             })
             .catch(err => {
-                console.error(err);
+                console.error(err.message);
             });
     }
 
