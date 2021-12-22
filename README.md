@@ -34,7 +34,7 @@ Thanks goes these amazing people:
 
 <td align="center"><a href="https://github.com/dbvker"><img src="https://avatars.githubusercontent.com/u/8574400?v=4" width="90px;" alt="Dylan Baker"/><br /><sub><b>Dylan baker</b></sub></a><br /></td></tr>
 
-<tr><td align="center"><img src="https://ca.slack-edge.com/ESZCHB482-U01ENJTQKJ7-fa23f1875f94-512" width="90px;" alt="Mason Muhlestein"/><br /><sub><b>Maribel Cuales</b></sub></a><br />
+<tr><td align="center"><a href="https://github.com/andrewhunt21"><img src="https://ca.slack-edge.com/ESZCHB482-U01ENJTQKJ7-fa23f1875f94-512" width="90px;" alt="Mason Muhlestein"/><br /><sub><b>Maribel Cuales</b></sub></a><br />
 
 <td align="center"><a href="https://github.com/djho57"><img src="https://avatars.githubusercontent.com/u/88899732?v=4" width="90px;" alt="Daniel Ho "/><br /><sub><b>Daniel Ho</b></sub></a><br />
 
