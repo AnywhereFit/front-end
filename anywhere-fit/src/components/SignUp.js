@@ -24,7 +24,7 @@ const SignUp = () => {
         axios.post('', cred)
             .then(resp => {
                 localStorage.setItem("token", );
-                push('/');
+                push('/client');
             })
             .catch(err => {
                 console.error(err);
