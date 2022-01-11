@@ -7,7 +7,7 @@ With Anywhere Fitness you are able to manage the following:
 ✔️ Maintain records of your members, 
 ✔️ Process and track sales, and more. 
 
-Anywhere Fitness is best suited for independent fitness businesses that offer classes and appointments.
+Anywhere Fitness is best suited for independent fitness business that offer classes and appointments.
 
 It is a solution for fitness instructors, who need to take away the awkwardness out of attendance 
 taking and client payment processing.
